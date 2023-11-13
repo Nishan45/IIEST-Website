@@ -72,7 +72,7 @@ export default class NavBar extends Component {
     }
     handler=(e)=>{
         
-        if(!this.ref.current.contains(e.target)){
+        if(this.ref.current && !this.ref.current.contains(e.target)){
             if(this.state.clicked){
                 this.handleClick();
             }
@@ -84,11 +84,11 @@ export default class NavBar extends Component {
         
         return (
             < >
-                <div className='nav' ref={this.ref} >
+                <div className='nav'  >
 
                     <img src='https://tcgtb.builtcon.in/wp-content/uploads/2023/02/tcgtbilogo_img.png' style={{ width: '10vh', height: '10vh',margin:'0',padding:'0' }} />
 
-                    <div id='navbar' className={this.state.clicked ? '#navbar active' : '#navbar'}>
+                    <div id='navbar' ref={this.ref} className={this.state.clicked ? '#navbar active' : '#navbar'}>
                         <div id='cross' onClick={this.handleClick} style={{ marginTop: '2vh', marginLeft: '40%',marginBottom:'2vh', }}>
                             <i className='fas fa-times'></i>
                         </div>

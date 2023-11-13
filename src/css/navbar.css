@@ -4,7 +4,6 @@
     justify-content: center;
     background: rgb(47, 255, 217);
     display: flex;
-
 }
 
 #navbar ul {
@@ -178,8 +177,15 @@
     #cross {
         display: none;
     }
-    #navbar ul li a:hover{
-        color: rgb(46, 37, 215);
+    #navbar ul li:hover a{
+        color: rgb(21, 21, 22);
+        cursor: pointer;
+    }
+    #navbar ul li:hover{
+        cursor: pointer;
+    }
+    #navbar ul li:hover i{
+        color: rgb(21, 21, 22);
     }
 
 }
