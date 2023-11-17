@@ -33,17 +33,7 @@ export default function Home() {
     },
   ])
 
-  useEffect(() => {
-    let interval = setInterval(() => {
-        let item = newsList[0];
-        setNewsList([...newsList, item])
-        setNewsList((products) => products.filter((_, index) => index !== 0));
-    }, 1000);
-
-    return function cleanup() {
-        clearInterval(interval);
-    };
-});
+  
 
   useEffect(() => {
     
