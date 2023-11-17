@@ -6,7 +6,9 @@ import {
   Routes,
   Route,
   Navigate,
+  
 } from "react-router-dom";
+
 
 import Home from './components/Home';
 import AboutUs from './components/AboutUs';
@@ -20,12 +22,13 @@ function App() {
     <Router >
       <NavBar/>
       <Routes >
-        <Route path='/' element={<Home/>}/>
+        <Route path='/Home' element={<Home/>} />
         <Route path='/AboutUs' element={<AboutUs/>}/>
         <Route path='/Ecosystem' element={<Ecosystem/>}/>
         <Route path='/Incubation' element={<Incubation/>}/>
         <Route path='/Gallery' element={<Gallery/>}/>
         <Route path='/ContactUs' element={<ContactUs/>}/>
+        <Route path="/" element={<Navigate to="/Home" />} />
 
       </Routes>
     </Router>

@@ -69,6 +69,14 @@ export default class NavBar extends Component {
 
     componentDidMount(){
         document.addEventListener('mousedown',this.handler);
+        const activePage=window.location.pathname;
+        
+        const navlink=document.querySelectorAll('#navbar ul li a').
+        forEach(link=>{
+            if(link.href.includes(`${activePage}`) && activePage!='/'){
+                link.classList.add('active')
+            }
+        })
     }
     handler=(e)=>{
         
@@ -81,6 +89,8 @@ export default class NavBar extends Component {
 
     
     render() {
+
+        
         
         return (
             < >
@@ -95,7 +105,7 @@ export default class NavBar extends Component {
                         <ul>
                             <li >
                                 
-                                <a href='/' >HOME</a>
+                                <a href='/Home' className="home">HOME</a>
                                 
                                 <i className="fa fa-angle-down" style={{color:'blue'}} onClick={this.handleDrop} ></i>
                                 <ul className='drop-down'>
@@ -105,7 +115,7 @@ export default class NavBar extends Component {
                                 </ul>
                                 {this.state.drop &&
                                 <div className='drop'>
-                                    <div className='sub-menu'>
+                                    <div  className='sub-menu'>
                                         <a href='#'>&bull; Overview</a>
                                         <a href='#'>&bull; Mission</a>
                                         <a href='#'>&bull; Vision</a>
@@ -117,7 +127,7 @@ export default class NavBar extends Component {
 
                             </li>
                             <li>
-                                <a href='/AboutUs'>ABOUT US</a>
+                                <a href='/AboutUs' className='aboutus' tabIndex={1}>ABOUT US</a>
                                 <i className="fa fa-angle-down" style={{color:'blue'}} onClick={this.handleDrop1} ></i>
 
                                 <ul className='drop-down'>

@@ -4,6 +4,7 @@
 }
 .container{
     padding: 0;
+    
 }
 .news {
     
@@ -34,15 +35,26 @@
 }
 @media screen and (max-width:769px){
     .backgroundImg{
-        width: 100%;
-        padding: 0;
-        margin: 0;
-
+        width: 100vw;
+        height: 50vh;  
     }
+    .test{
+        width: 100vw;
+        height: 50vh;
+        position: absolute;
+    }
+    
     .backgroundText{
-        color:black;
-        padding: 5%;
-        
+        position: absolute;
+        height: 50vh;
+        margin: 0;
+        padding: 0 5%;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.4);
     }
     .news {
         
@@ -50,25 +62,37 @@
     }
 }
 
+
 @media screen and (min-width:769px){
     .backgroundImg{
-        width: 80%;
-        height: 70vh;
-             
+        width: 60vw;
+        height: 70vh;  
     }
-    
+    .test{
+        width: 60vw;
+        height: 70vh;
+        position: absolute;
+    }
     .backgroundText{
         
         height: 70vh;
-        margin-top: -70vh;
-        width: 80%;
+        margin: 0;
+        padding: 0;
+        width: 60vw;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         background: rgba(0, 0, 0, 0.4);
+        position: absolute;
     }
     .backgroundText h1{
         padding: 5vh;
     }
 }
+
+.scroll-list{
+    transition: all 0.3s linear;
+    
+}
+
